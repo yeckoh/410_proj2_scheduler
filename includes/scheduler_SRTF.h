@@ -11,7 +11,7 @@
 
 class Scheduler_SRTF: public Scheduler {
 public:
-	//this is a non - preemptive scheduler, so set the preemptive member variable to true
+	//this is a non - preemptive scheduler, so set the preemptive member variable to false
 	//when calling the base class
 	Scheduler_SRTF(std::queue<PCB> &queue):Scheduler(queue,false,UNINITIALIZED){};
 	virtual ~Scheduler_SRTF(){};
