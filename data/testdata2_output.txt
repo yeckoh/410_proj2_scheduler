@@ -1,0 +1,119 @@
+Current job is 1 started:0
+Running process 1 ;tick_count=0
+Running process 1 ;tick_count=1
+Current job is 2 started:2
+Running process 2 ;tick_count=2
+Running process 2 ;tick_count=3
+Current job is 1 started:0
+Running process 1 ;tick_count=4
+Running process 1 ;tick_count=5
+Current job is 3 started:6
+Running process 3 ;tick_count=6
+Current job is 2 started:2
+Running process 2 ;tick_count=7
+Current job is 4 started:8
+Running process 4 ;tick_count=8
+Running process 4 ;tick_count=9
+Current job is 1 started:0
+Running process 1 ;tick_count=10
+Running process 1 ;tick_count=11
+Current job is 2 started:2
+Running process 2 ;tick_count=12
+Current job is 4 started:8
+Running process 4 ;tick_count=13
+Current job is 1 started:0
+Running process 1 ;tick_count=14
+Current job is 4 started:8
+Running process 4 ;tick_count=15
+Current tick is 16 Invalid CPU Job
+
+RR ------------------------
+Average wait time 		=6
+Average Response time 		=1.25
+Average Turnaround time 	=10
+Process 3 Required CPU time:1  arrived:4 started:6 finished:7
+Process 2 Required CPU time:4  arrived:2 started:2 finished:13
+Process 1 Required CPU time:7  arrived:0 started:0 finished:15
+Process 4 Required CPU time:4  arrived:5 started:8 finished:16
+
+RR PASSED TEST
+RR PASSED TEST
+RR PASSED TEST
+
+
+Current job is 1 started:0
+Running process 1 ;tick_count=0
+Running process 1 ;tick_count=1
+Current job is 2 started:2
+Running process 2 ;tick_count=2
+Running process 2 ;tick_count=3
+Current job is 3 started:4
+Running process 3 ;tick_count=4
+Current job is 2 started:2
+Running process 2 ;tick_count=5
+Running process 2 ;tick_count=6
+Current job is 4 started:7
+Running process 4 ;tick_count=7
+Running process 4 ;tick_count=8
+Running process 4 ;tick_count=9
+Running process 4 ;tick_count=10
+Current job is 1 started:0
+Running process 1 ;tick_count=11
+Running process 1 ;tick_count=12
+Running process 1 ;tick_count=13
+Running process 1 ;tick_count=14
+Current job is 1 started:0
+Running process 1 ;tick_count=15
+Current tick is 16 Invalid CPU Job
+
+SRTF ------------------------
+Average wait time 		=3
+Average Response time 		=0.5
+Average Turnaround time 	=7
+Process 3 Required CPU time:1  arrived:4 started:4 finished:5
+Process 2 Required CPU time:4  arrived:2 started:2 finished:7
+Process 4 Required CPU time:4  arrived:5 started:7 finished:11
+Process 1 Required CPU time:7  arrived:0 started:0 finished:16
+
+SRTF PASSED TEST
+SRTF PASSED TEST
+SRTF PASSED TEST
+
+
+Current job is 1 started:0
+Running process 1 ;tick_count=0
+Running process 1 ;tick_count=1
+Running process 1 ;tick_count=2
+Running process 1 ;tick_count=3
+Running process 1 ;tick_count=4
+Running process 1 ;tick_count=5
+Running process 1 ;tick_count=6
+Current job is 2 started:7
+Running process 2 ;tick_count=7
+Running process 2 ;tick_count=8
+Running process 2 ;tick_count=9
+Running process 2 ;tick_count=10
+Current job is 3 started:11
+Running process 3 ;tick_count=11
+Current job is 4 started:12
+Running process 4 ;tick_count=12
+Running process 4 ;tick_count=13
+Running process 4 ;tick_count=14
+Running process 4 ;tick_count=15
+Current tick is 16 Invalid CPU Job
+
+FIFO ------------------------
+Average wait time 		=4.75
+Average Response time 		=4.75
+Average Turnaround time 	=8.75
+Process 1 Required CPU time:7  arrived:0 started:0 finished:7
+Process 2 Required CPU time:4  arrived:2 started:7 finished:11
+Process 3 Required CPU time:1  arrived:4 started:11 finished:12
+Process 4 Required CPU time:4  arrived:5 started:12 finished:16
+
+FIFO PASSED TEST
+FIFO PASSED TEST
+FIFO PASSED TEST
+
+
+numb_failed_tests = 0
