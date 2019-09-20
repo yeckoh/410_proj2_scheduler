@@ -26,7 +26,7 @@ public:
 	//get next process
 	virtual PCB getNext();
 
-	//returns true if there are still jobs in the readyQ
+	//returns true if there are no  jobs in the readyQ
 	//false otherwise
 	bool isEmpty();
 
