@@ -52,7 +52,7 @@ protected:
 
 	// sort  ready_q based on the scheduler algorithm whenever add(PCB p) is called
 	//FIFO 			not preemptive - no sorting, just push job onto back of ready_q
-	//SRTF 	        not preemptive - sort by remaining_cpu_time whenever add(PCB p) is called
+	//SRTF 	    preemptive - sort by remaining_cpu_time whenever add(PCB p) is called
 	//RR 	        	preemptive - no sorting, just push job onto back of ready_q
 	virtual void sort()=0;
 };

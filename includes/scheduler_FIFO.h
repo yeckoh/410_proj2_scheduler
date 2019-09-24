@@ -11,7 +11,7 @@
 
 class Scheduler_FIFO: public Scheduler {
 public:
-	//this is a non - preemptive scheduler, so set the preemptive member variable to true
+	//this is a non - preemptive scheduler, so set the preemptive member variable to false
 	//when calling the base class
 	Scheduler_FIFO(std::queue<PCB> &queue):Scheduler(queue,false,UNINITIALIZED){};
 	virtual ~Scheduler_FIFO(){};

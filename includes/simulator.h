@@ -12,8 +12,6 @@
 #include "../includes/scheduler.h"
 #include "../includes/PCB.h"
 
-
-
 //simulates processes being loaded and unloaded onto a CPU using a dispatcher and scheduler
 void simulate(const char* pSourceFile,Scheduler &s,std::vector<PCB> &finished_vector, int time_slice= DEFAULT_TIME_SLICE);
 
