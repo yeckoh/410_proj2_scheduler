@@ -28,7 +28,7 @@ public:
 	bool isValidJobOnCPU();
 private:
 	CPU *cpu; 	//this is initialized from a reference, it cannot be null
-	bool is_valid_job_on_cpu;
+	bool is_valid_job_on_cpu;		//set or reset according to whether  there is a job on the CPU
 };
 
 #endif /* DISPATCHER_H_ */

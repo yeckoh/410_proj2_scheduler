@@ -27,13 +27,12 @@ Current job is 4 started:9
 Running process 4 ;tick_count=17
 Current job is 2 started:3
 Running process 2 ;tick_count=18
-Current job is 2 started:3
 Running process 2 ;tick_count=19
+Current job is 2 started:3
 Running process 2 ;tick_count=20
-Current job is 2 started:3
 Running process 2 ;tick_count=21
-Running process 2 ;tick_count=22
 Current job is 2 started:3
+Running process 2 ;tick_count=22
 Running process 2 ;tick_count=23
 Current tick is 24 Invalid CPU Job
 
@@ -58,6 +57,7 @@ Running process 1 ;tick_count=2
 Running process 1 ;tick_count=3
 Running process 1 ;tick_count=4
 Running process 1 ;tick_count=5
+Current job is 1 started:1
 Running process 1 ;tick_count=6
 Current job is 4 started:7
 Running process 4 ;tick_count=7
@@ -74,6 +74,7 @@ Running process 2 ;tick_count=15
 Running process 2 ;tick_count=16
 Running process 2 ;tick_count=17
 Running process 2 ;tick_count=18
+Current job is 2 started:14
 Running process 2 ;tick_count=19
 Running process 2 ;tick_count=20
 Running process 2 ;tick_count=21
