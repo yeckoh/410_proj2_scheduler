@@ -18,11 +18,14 @@ bool EXPECT_NEAR(std::string info, float expectedVal, float actualVal,float tole
 	float val = std::abs((expectedVal - actualVal));
 	bool bret = (val<tolerance) && !std::isnan(actualVal);
 
-	if (bret)
-		std::cout<<info<<" PASSED TEST"<<std::endl;
-	else
-		std::cout<<info<<" FAILED  expected="<<std::to_string(expectedVal)<<" actual="<<std::to_string(actualVal)<<std::endl;
-
+	if (bret){
+		PRINT2(info," PASSED TEST");
+//		std::cout<<info<<" PASSED TEST"<<std::endl;
+	}
+	else{
+		PRINT4(info<<" FAILED  expected=",std::to_string(expectedVal)," actual=",std::to_string(actualVal));
+//		std::cout<<info<<" FAILED  expected="<<std::to_string(expectedVal)<<" actual="<<std::to_string(actualVal)<<std::endl;
+	}
 	return bret;
 }
 
@@ -36,6 +39,6 @@ int verify_stats( std::string info, std::vector<PCB> &finished_vector, float av_
 	if (!EXPECT_NEAR(info,av_wait_time,  myStats.get_av_wait_time(),TOLERANCE)) numb_failed_tests++;
 	if (!EXPECT_NEAR(info,av_response_time,  myStats.get_av_response_time(),TOLERANCE)) numb_failed_tests++;
 	if (!EXPECT_NEAR(info,av_turnaround_time,  myStats.get_av_turnaround_time(),TOLERANCE)) numb_failed_tests++;
-	std::cout<<std::endl<<std::endl;
+
 	return numb_failed_tests;
 }

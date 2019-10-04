@@ -9,6 +9,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <algorithm>
 #include "../includes/joblist.h"
 #include "../includes/dispatcher.h"
 #include "../includes/scheduler_RR.h"
@@ -46,9 +47,13 @@ int test_simulation(std::string info, Scheduler & s, float av_wait_time,float av
 
 	//where all the finished processes go
 	std::vector<PCB> finished_vector;
-
+//#define TESTFILE1
+#ifdef TESTFILE1
+	simulate(SOURCE_FILE_1,s,finished_vector );
+#else
 	simulate(SOURCE_FILE_2,s,finished_vector );
-	print_stats(info, finished_vector);
+#endif
+//	print_stats(info, finished_vector);
 	return verify_stats(info,finished_vector,av_wait_time,av_response_time,av_turnaround_time);
 }
 
@@ -60,20 +65,31 @@ int main(){
 
 	//round robin
 	Scheduler_RR  scheduler1(ready_Q,DEFAULT_TIME_SLICE);
-//	int numb_failed_tests = test_simulation(std::string("RR"),scheduler1,9.5,1.75,15.25);//testdata1
-	int numb_failed_tests = test_simulation(std::string("RR"),scheduler1,5.0,1.5,9.0);	//testdata2
+#ifdef TESTFILE1
+	int numb_failed_tests = test_simulation(std::string("RR"),scheduler1,9.5,1.75,15.25);//testdata1
+#else
+	int  numb_failed_tests= test_simulation(std::string("RR"),scheduler1,5.0,1.5,9.0);	//testdata2
+#endif
 	resetContainer(ready_Q);
 
 	//SRTF
 	Scheduler_SRTF  scheduler2(ready_Q);
-//	numb_failed_tests = test_simulation(std::string("SRTF"),scheduler2,4.75,4.75,10.5);//testdata1
-	numb_failed_tests = test_simulation(std::string("SRTF"),scheduler2,3.00,0.5,7);//testdata2
+#ifdef TESTFILE1
+	numb_failed_tests += test_simulation(std::string("SRTF"),scheduler2,4.75,4.75,10.5);//testdata1
+#else
+	numb_failed_tests += test_simulation(std::string("SRTF"),scheduler2,3.00,0.5,7);//testdata2
+#endif
 	resetContainer(ready_Q);
 
 	//FIFO
 	Scheduler_FIFO  scheduler3(ready_Q);
-//	numb_failed_tests = test_simulation(std::string("FIFO"),scheduler3,8.25,8.25,14);	//testdata1
-	numb_failed_tests = test_simulation(std::string("FIFO"),scheduler3,4.75,4.75,8.75);   //testdata2
+#ifdef TESTFILE1
+	numb_failed_tests+= test_simulation(std::string("FIFO"),scheduler3,8.25,8.25,14);	//testdata1
+#else
+	numb_failed_tests += test_simulation(std::string("FIFO"),scheduler3,4.75,4.75,8.75);   //testdata2
+#endif
+
+
 	resetContainer(ready_Q);
 
 	std::cout<<"numb_failed_tests = "<<numb_failed_tests<<std::endl;
