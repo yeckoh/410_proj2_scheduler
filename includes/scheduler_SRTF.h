@@ -11,9 +11,11 @@
 
 class Scheduler_SRTF: public Scheduler {
 public:
-	//this is a preemptive scheduler, so set the preemptive member variable to true
-	//when calling the base class
+	//override this behaviour if necessary
 	bool  time_to_switch_processes(int tick_count, PCB &p);
+
+	//this is a  preemptive scheduler, so set the preemptive member variable to true
+	//when calling the base class
 	Scheduler_SRTF(std::queue<PCB> &queue):Scheduler(queue,true,UNINITIALIZED){};
 	virtual ~Scheduler_SRTF(){};
 	virtual void sort();
