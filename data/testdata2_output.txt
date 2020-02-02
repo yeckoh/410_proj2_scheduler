@@ -37,8 +37,6 @@ Process 1 Required CPU time:7  arrived:0 started:0 finished:16
 RR PASSED TEST
 RR PASSED TEST
 RR PASSED TEST
-
-
 Current job is 1 started:0
 Running process 1 ;tick_count=0
 Running process 1 ;tick_count=1
@@ -76,8 +74,6 @@ Process 1 Required CPU time:7  arrived:0 started:0 finished:16
 SRTF PASSED TEST
 SRTF PASSED TEST
 SRTF PASSED TEST
-
-
 Current job is 1 started:0
 Running process 1 ;tick_count=0
 Running process 1 ;tick_count=1
@@ -112,6 +108,4 @@ Process 4 Required CPU time:4  arrived:5 started:12 finished:16
 FIFO PASSED TEST
 FIFO PASSED TEST
 FIFO PASSED TEST
-
-
 numb_failed_tests = 0

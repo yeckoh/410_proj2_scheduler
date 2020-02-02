@@ -5,7 +5,7 @@
  *      Author: keith
  *
  *      implements shortest remaining time first scheduling algorithm
- *      not pre-emptive
+ *     pre-emptive
  */
 
 //TODO fill in content

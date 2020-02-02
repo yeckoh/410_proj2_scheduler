@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : 410_proj2_OS.cpp
-// Author      : 
+// Author      :
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
@@ -20,6 +20,9 @@
 #include "../includes/stats.h"
 #include "../includes/simulator.h"
 #include "../includes/tester.h"
+
+//use first or second test file
+//#define TESTFILE1
 
 using namespace std;
 
@@ -47,13 +50,13 @@ int test_simulation(std::string info, Scheduler & s, float av_wait_time,float av
 
 	//where all the finished processes go
 	std::vector<PCB> finished_vector;
-//#define TESTFILE1
+
 #ifdef TESTFILE1
 	simulate(SOURCE_FILE_1,s,finished_vector );
 #else
 	simulate(SOURCE_FILE_2,s,finished_vector );
 #endif
-//	print_stats(info, finished_vector);
+	print_stats(info, finished_vector);
 	return verify_stats(info,finished_vector,av_wait_time,av_response_time,av_turnaround_time);
 }
 
@@ -78,6 +81,7 @@ int main(){
 	numb_failed_tests += test_simulation(std::string("SRTF"),scheduler2,4.75,4.75,10.5);//testdata1
 #else
 	numb_failed_tests += test_simulation(std::string("SRTF"),scheduler2,3.00,0.5,7);//testdata2
+//	numb_failed_tests += test_simulation(std::string("SRTF"),scheduler2,4.00,0.5,9);//testdata2
 #endif
 	resetContainer(ready_Q);
 

@@ -48,8 +48,6 @@ Process 2 Required CPU time:10  arrived:3 started:3 finished:24
 RR PASSED TEST
 RR PASSED TEST
 RR PASSED TEST
-
-
 Current tick is 0 Invalid CPU Job
 Current job is 1 started:1
 Running process 1 ;tick_count=1
@@ -94,8 +92,6 @@ Process 2 Required CPU time:10  arrived:3 started:14 finished:24
 SRTF PASSED TEST
 SRTF PASSED TEST
 SRTF PASSED TEST
-
-
 Current tick is 0 Invalid CPU Job
 Current job is 1 started:1
 Running process 1 ;tick_count=1
@@ -138,6 +134,4 @@ Process 4 Required CPU time:3  arrived:5 started:21 finished:24
 FIFO PASSED TEST
 FIFO PASSED TEST
 FIFO PASSED TEST
-
-
 numb_failed_tests = 0

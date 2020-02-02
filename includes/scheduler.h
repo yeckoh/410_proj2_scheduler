@@ -37,13 +37,11 @@ public:
 	//true - switch processes
 	//false - do not switch
 	virtual bool   time_to_switch_processes(int tick_count, PCB &p);
-protected:
-	// sort  ready_q based on the scheduler algorithm whenever add(PCB p) is called
-	//FIFO 			not preemptive - no sorting, just push job onto back of ready_q
-	//SRTF 	    preemptive - sort by remaining_cpu_time whenever add(PCB p) or time_to_switch_processes is called
-	//RR 	        	preemptive - no sorting, just push job onto back of ready_q
-	virtual void sort()=0;
 
+	// sort  ready_q based on the scheduler algorithm used whenever add(PCB p) is called
+	virtual void sort()=0;		//pure virtual function
+
+protected:
 	//holds jobs that are in memory and ready to run
 	//for this program they are leaded into memory at arrival time
 	//this is initialized from a reference, it cannot be null
