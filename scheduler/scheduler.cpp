@@ -30,6 +30,7 @@ bool Scheduler::isEmpty() {
 	return ready_q->empty();
 }
 
+
 //if process has completed (used all its remaining_cpu_time) or
 //if we are using a preemptive scheduling algorithm and the
 //timeslice is over then its time to switch processes
@@ -39,9 +40,4 @@ bool Scheduler::isEmpty() {
 bool Scheduler::time_to_switch_processes(int tick_count, PCB &p) {
 	return p.remaining_cpu_time <= 0;
 }
-// 	return (p.remaining_cpu_time <= 0 || (preemptive && (p.required_cpu_time-p.remaining_cpu_time) % time_slice == 0));
-// sort has no behavior
-
-
-
-
+// sort is pure virtual -> scheduler is ABC

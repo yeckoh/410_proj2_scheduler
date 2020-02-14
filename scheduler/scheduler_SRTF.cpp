@@ -19,8 +19,6 @@ bool Scheduler_SRTF::time_to_switch_processes(int tick_count, PCB &p) {
 	sort();
 	if(ready_q->front().remaining_cpu_time < p.remaining_cpu_time)
 		return true;
-	//if(!ready_q->empty())
-	//return ready_q->front().remaining_cpu_time < p.remaining_cpu_time;
 	return this->Scheduler::time_to_switch_processes(tick_count, p);
 }
 
