@@ -2,21 +2,14 @@
  * scheduler.cpp
  *
  *  Created on: Sep 8, 2019
- *      Author: keith
+ *  	Author: wchang 00960978
+ *	 LModified: Feb 13, 2020
+ *     Project: CNU-SP20-CS410 p2_scheduler
  */
-
-//TODO fill in content
-
-
 
 #include "../includes/scheduler.h"
 
 
-
-Scheduler::Scheduler(std::queue<PCB> &queue, bool preemptive = false, int time_slice =
-			UNINITIALIZED) :	ready_q(&queue), preemptive(preemptive), time_slice(time_slice) {}
-
-Scheduler::~Scheduler() {}
 
 //add a process, either a new one or one that
 //had been running on the CPU and has been preempted
@@ -44,11 +37,10 @@ bool Scheduler::isEmpty() {
 //true - switch processes
 //false - do not switch
 bool Scheduler::time_to_switch_processes(int tick_count, PCB &p) {
-	// int process_number, arrival_time, required_cpu_time
-	return (!p.remaining_cpu_time || (preemptive && !time_slice));
+	return p.remaining_cpu_time <= 0;
 }
-
-// sort has no behavior in base class
+// 	return (p.remaining_cpu_time <= 0 || (preemptive && (p.required_cpu_time-p.remaining_cpu_time) % time_slice == 0));
+// sort has no behavior
 
 
 
