@@ -2,16 +2,12 @@
  * Dispatcher.cpp
  *
  *  Created on: Sep 8, 2019
- *      Author: keith
+ *  	Author: wchang 00960978
+ *	 LModified: Feb 13, 2020
+ *     Project: CNU-SP20-CS410 p2_scheduler
  */
 
-//TODO fill in content
-
 #include "../includes/dispatcher.h"
-
-	Dispatcher::Dispatcher(CPU &cpu):cpu(&cpu),is_valid_job_on_cpu(false) {};
-
-	Dispatcher::~Dispatcher(){};
 
 	//pull current process (if any) off CPU and return it
 	//if nothing on CPU returns an uninitialized PCB
@@ -21,10 +17,10 @@
 
 	//place the current process on the CPU for execution
 	void Dispatcher::put_on_CPU(PCB  &process) {
-		cpu->put_process_on_core(process);
+			cpu->put_process_on_core(process);
 	}
 
 	//is CPU idle or working
 	bool Dispatcher::isValidJobOnCPU() {
-		return is_valid_job_on_cpu;
+		return !cpu->get_COPY_of_Current_Process().isEmpty();
 	}
